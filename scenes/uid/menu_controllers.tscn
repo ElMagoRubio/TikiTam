@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp3conn5ww2sv"]
+
+[ext_resource type="Script" uid="uid://s0b3edowac2d" path="res://scenes/uid/menu_controllers_template.gd" id="1_d16tt"]
+
+[node name="MenuControllers" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d16tt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.729412)
+metadata/_edit_use_anchors_ = true
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button0" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Button 0"
+
+[node name="Button1" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Button 2"
+
+[node name="Button2" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Button 3"
+
+[connection signal="pressed" from="Buttons/Button0" to="." method="_on_button_0_pressed"]
+[connection signal="pressed" from="Buttons/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Buttons/Button2" to="." method="_on_button_2_pressed"]

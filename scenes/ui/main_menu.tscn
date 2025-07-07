@@ -25,6 +25,17 @@ offset_bottom = 540.0
 grow_horizontal = 1
 grow_vertical = 1
 
+[node name="Button0" parent="MenuControllers/Buttons" index="0"]
+text = "JUGAR"
+
+[node name="Button1" parent="MenuControllers/Buttons" index="1"]
+text = "OPCIONES"
+
+[node name="Button2" parent="MenuControllers/Buttons" index="2"]
+text = "SALIR"
+
 [connection signal="button_0_pressed" from="MenuControllers" to="." method="_on_menu_button_0_pressed"]
 [connection signal="button_1_pressed" from="MenuControllers" to="." method="_on_menu_button_1_pressed"]
 [connection signal="button_2_pressed" from="MenuControllers" to="." method="_on_menu_button_2_pressed"]
+
+[editable path="MenuControllers"]

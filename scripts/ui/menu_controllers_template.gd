@@ -13,16 +13,17 @@ func _on_button_0_button_down() -> void:
 
 
 func _on_button_1_button_down() -> void:
-	print("Button 1 pressed")
+	print("Button 1 down")
 	if not GlobalSounds.play_sound(sound):
 		print("Error: no se pudo reproducir el sonido")
 
 
 func _on_button_2_button_down() -> void:
-	print("Button 1 pressed")
+	print("Button 2 down")
 	if not GlobalSounds.play_sound(sound):
 		print("Error: no se pudo reproducir el sonido")
 
 
-func _on_option_button_2_pressed() -> void:
-	pass # Replace with function body.
+func _on_button_2_pressed() -> void:
+	print("Button 2 pressed")
+	self.visible = false

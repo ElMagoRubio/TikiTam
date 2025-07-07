@@ -29,6 +29,7 @@ visible = false
 
 [connection signal="pressed" from="Options/Buttons/Button0" to="." method="_on_option_button_0_pressed"]
 [connection signal="pressed" from="Options/Buttons/Button1" to="." method="_on_option_button_1_pressed"]
+[connection signal="pressed" from="Options/Buttons/Button2" to="Options" method="_on_option_button_2_pressed"]
 [connection signal="pressed" from="Audio/MenuControllers/Buttons/Button2" to="." method="_on_audio_button_2_pressed"]
 [connection signal="pressed" from="Video/MenuControllers/Buttons/Button2" to="." method="_on_video_button_2_pressed"]
 

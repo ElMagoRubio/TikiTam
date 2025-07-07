@@ -55,3 +55,4 @@ text = "Button 3"
 [connection signal="button_down" from="Buttons/Button0" to="." method="_on_button_0_button_down"]
 [connection signal="button_down" from="Buttons/Button1" to="." method="_on_button_1_button_down"]
 [connection signal="button_down" from="Buttons/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="pressed" from="Buttons/Button2" to="." method="_on_button_2_pressed"]

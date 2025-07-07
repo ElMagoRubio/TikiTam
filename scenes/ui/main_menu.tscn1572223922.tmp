@@ -33,9 +33,6 @@ text = "SALIR"
 [node name="OptionsMenu" parent="." instance=ExtResource("4_m1kxf")]
 visible = false
 
-[connection signal="pressed" from="MainMenu/Buttons/Button1" to="." method="_on_main_button_1_pressed"]
-[connection signal="pressed" from="MainMenu/Buttons/Button2" to="." method="_on_button_2_pressed"]
-
 [editable path="MainMenu"]
 [editable path="OptionsMenu"]
 [editable path="OptionsMenu/Options"]

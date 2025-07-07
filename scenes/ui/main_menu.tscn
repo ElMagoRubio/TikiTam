@@ -15,15 +15,12 @@ texture = ExtResource("1_ed5e6")
 metadata/_edit_use_anchors_ = true
 
 [node name="MenuControllers" parent="." instance=ExtResource("2_f8hk5")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_left = 960.0
 offset_top = 540.0
 offset_right = 960.0
 offset_bottom = 540.0
-grow_horizontal = 1
-grow_vertical = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Button0" parent="MenuControllers/Buttons" index="0"]
 text = "JUGAR"
@@ -34,8 +31,8 @@ text = "OPCIONES"
 [node name="Button2" parent="MenuControllers/Buttons" index="2"]
 text = "SALIR"
 
-[connection signal="button_0_pressed" from="MenuControllers" to="." method="_on_menu_button_0_pressed"]
-[connection signal="button_1_pressed" from="MenuControllers" to="." method="_on_menu_button_1_pressed"]
-[connection signal="button_2_pressed" from="MenuControllers" to="." method="_on_menu_button_2_pressed"]
+[connection signal="pressed" from="MenuControllers/Buttons/Button0" to="." method="_on_button_0_pressed"]
+[connection signal="pressed" from="MenuControllers/Buttons/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="MenuControllers/Buttons/Button2" to="." method="_on_button_2_pressed"]
 
 [editable path="MenuControllers"]

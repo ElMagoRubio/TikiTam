@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1hsujtdp5tp2"]
+
+[ext_resource type="PackedScene" uid="uid://dp3conn5ww2sv" path="res://scenes/ui/menu_controllers.tscn" id="1_ta2k2"]
+
+[node name="OptionsMenu" type="Node2D"]
+
+[node name="Fondo" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.729412)
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuControllers" parent="." instance=ExtResource("1_ta2k2")]

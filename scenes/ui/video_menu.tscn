@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0srxhpf1s4h7"]
+
+[ext_resource type="Script" uid="uid://drr24jclie044" path="res://scripts/ui/video_menu.gd" id="1_ru16h"]
+[ext_resource type="PackedScene" uid="uid://dp3conn5ww2sv" path="res://scenes/ui/menu_controllers.tscn" id="2_pi74o"]
+
+[node name="VideoMenu" type="Node2D"]
+script = ExtResource("1_ru16h")
+
+[node name="MenuControllers" parent="." instance=ExtResource("2_pi74o")]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Button0" parent="MenuControllers/Buttons" index="0"]
+toggle_mode = true
+text = "PANTALLA COMPLETA"
+
+[node name="Button1" parent="MenuControllers/Buttons" index="1"]
+toggle_mode = true
+text = "SIN BORDES"
+
+[node name="Button2" parent="MenuControllers/Buttons" index="2"]
+text = "VOLVER"
+
+[connection signal="toggled" from="MenuControllers/Buttons/Button0" to="." method="on_button_0_toggled"]
+[connection signal="toggled" from="MenuControllers/Buttons/Button1" to="." method="on_button_1_toggled"]
+
+[editable path="MenuControllers"]

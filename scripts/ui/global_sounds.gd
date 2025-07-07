@@ -5,7 +5,7 @@ var audio_player: AudioStreamPlayer
 func _ready():
 	audio_player = AudioStreamPlayer.new()
 	add_child(audio_player)
-	audio_player.bus = "Music"
+	audio_player.bus = "SFX"
 
 func play_sound(path: String):
 	if not FileAccess.file_exists(path):

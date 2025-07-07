@@ -22,3 +22,7 @@ func _on_button_2_button_down() -> void:
 	print("Button 1 pressed")
 	if not GlobalSounds.play_sound(sound):
 		print("Error: no se pudo reproducir el sonido")
+
+
+func _on_option_button_2_pressed() -> void:
+	pass # Replace with function body.

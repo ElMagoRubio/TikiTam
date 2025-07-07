@@ -19,22 +19,25 @@ texture = ExtResource("1_yda0v")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
+offset_top = 100.0
 offset_right = 1920.0
-offset_bottom = 1080.0
+offset_bottom = 1180.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
 text = "ESCENA PRINCIPAL"
 label_settings = SubResource("LabelSettings_yda0v")
 horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Return" type="Button" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 480.0
-offset_top = 600.0
+offset_top = 200.0
 offset_right = 1440.0
-offset_bottom = 725.0
+offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4

@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp3conn5ww2sv"]
+[gd_scene load_steps=2 format=3 uid="uid://dp3conn5ww2sv"]
 
 [ext_resource type="Script" uid="uid://s0b3edowac2d" path="res://scripts/ui/menu_controllers_template.gd" id="1_d16tt"]
-[ext_resource type="AudioStream" uid="uid://prirj4iccbs8" path="res://assets/audio/sfx/Jam_Player_Tambor_1_Sonido.ogg" id="2_cjt1b"]
 
 [node name="MenuControllers" type="Control"]
 layout_mode = 3
@@ -31,12 +30,6 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="ButtonSound" type="AudioStreamPlayer2D" parent="Buttons"]
-stream = ExtResource("2_cjt1b")
-attenuation = 0.482968
-bus = &"SFX"
-playback_type = 1
 
 [node name="Button0" type="Button" parent="Buttons"]
 custom_minimum_size = Vector2(200, 100)

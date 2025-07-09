@@ -23,6 +23,6 @@ func _on_video_button_2_pressed() -> void:
 	video_menu.visible = false
 	options_menu.visible = true
 
-func _on_audio_button_2_pressed() -> void:
+func _on_audio_button_pressed() -> void:
 	audio_menu.visible = false
 	options_menu.visible = true

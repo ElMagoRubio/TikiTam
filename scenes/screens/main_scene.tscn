@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsy72grj1s01r"]
+[gd_scene load_steps=5 format=3 uid="uid://dsy72grj1s01r"]
 
 [ext_resource type="Texture2D" uid="uid://dagsrjhec3hj5" path="res://assets/sprites/background/BG_Piramide-01.png" id="1_yda0v"]
 [ext_resource type="Script" uid="uid://dbr24ckmptv4v" path="res://scripts/ui/return_main_menu.gd" id="2_yy6ic"]
+[ext_resource type="PackedScene" uid="uid://iulxy2uhwmqq" path="res://scenes/ui/pause_menu.tscn" id="3_gk7ju"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yda0v"]
-font_size = 32
+font_size = 40
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 0
@@ -44,5 +45,7 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 text = "Volver a menú principal"
 script = ExtResource("2_yy6ic")
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_gk7ju")]
 
 [connection signal="pressed" from="Return" to="Return" method="_on_pressed"]

@@ -1,16 +1,106 @@
 [gd_scene load_steps=3 format=3 uid="uid://dwt7hygfhtp84"]
 
 [ext_resource type="Script" uid="uid://ccgehd0n2xkxx" path="res://scripts/ui/audio_menu.gd" id="1_f0r6i"]
-[ext_resource type="PackedScene" uid="uid://dp3conn5ww2sv" path="res://scenes/ui/menu_controllers.tscn" id="1_pnqyj"]
+[ext_resource type="Script" uid="uid://b5cqenkfvqilj" path="res://scripts/ui/audio_slider.gd" id="2_f0r6i"]
 
 [node name="AudioMenu" type="Node2D"]
 script = ExtResource("1_f0r6i")
 
-[node name="MenuControllers" parent="." instance=ExtResource("1_pnqyj")]
+[node name="Fondo" type="ColorRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.729412)
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" parent="MenuControllers" index="1"]
-text = "AUDIO"
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+alignment = 1
 
-[editable path="MenuControllers"]
+[node name="Master" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Master"]
+clip_contents = true
+custom_minimum_size = Vector2(800, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("2_f0r6i")
+bus_nombre = "Master"
+
+[node name="Label" type="Label" parent="VBoxContainer/Master"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "MASTER
+
+"
+
+[node name="Music" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Music"]
+clip_contents = true
+custom_minimum_size = Vector2(800, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("2_f0r6i")
+bus_nombre = "Master"
+
+[node name="Label" type="Label" parent="VBoxContainer/Music"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "MUSIC
+
+"
+
+[node name="SFX" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/SFX"]
+clip_contents = true
+custom_minimum_size = Vector2(800, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("2_f0r6i")
+bus_nombre = "Master"
+
+[node name="Label" type="Label" parent="VBoxContainer/SFX"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "SOUND EFFECTS
+
+
+"
+
+[node name="Return" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "VOLVER"
+
+[connection signal="drag_ended" from="VBoxContainer/Master/HSlider" to="VBoxContainer/Master/HSlider" method="_on_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/Master/HSlider" to="." method="_on_master_scroll_value_changed"]
+[connection signal="drag_ended" from="VBoxContainer/Music/HSlider" to="VBoxContainer/Music/HSlider" method="_on_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/Music/HSlider" to="." method="_on_master_scroll_value_changed"]
+[connection signal="drag_ended" from="VBoxContainer/SFX/HSlider" to="VBoxContainer/SFX/HSlider" method="_on_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/SFX/HSlider" to="." method="_on_master_scroll_value_changed"]
+[connection signal="button_down" from="VBoxContainer/Return" to="." method="_on_return_button_down"]

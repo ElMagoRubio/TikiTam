@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cbglm0ijl0ta6" path="res://scenes/ui/options_menu.tscn" id="4_e21yp"]
 
 [node name="MainMenu" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_5weqt")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -45,6 +46,5 @@ visible = false
 [editable path="OptionsMenu"]
 [editable path="OptionsMenu/Options"]
 [editable path="OptionsMenu/Audio"]
-[editable path="OptionsMenu/Audio/MenuControllers"]
 [editable path="OptionsMenu/Video"]
 [editable path="OptionsMenu/Video/MenuControllers"]

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c0srxhpf1s4h7" path="res://scenes/ui/video_menu.tscn" id="4_0ejsc"]
 
 [node name="OptionsMenu" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_wj2x4")
 
 [node name="Options" parent="." instance=ExtResource("1_ta2k2")]
@@ -32,11 +33,9 @@ visible = false
 
 [connection signal="pressed" from="Options/Buttons/Button0" to="." method="_on_option_button_0_pressed"]
 [connection signal="pressed" from="Options/Buttons/Button1" to="." method="_on_option_button_1_pressed"]
-[connection signal="pressed" from="Audio/MenuControllers/Buttons/Button2" to="." method="_on_audio_button_2_pressed"]
 [connection signal="pressed" from="Video/MenuControllers/Buttons/Button2" to="." method="_on_video_button_2_pressed"]
 
 [editable path="Options"]
 [editable path="Audio"]
-[editable path="Audio/MenuControllers"]
 [editable path="Video"]
 [editable path="Video/MenuControllers"]

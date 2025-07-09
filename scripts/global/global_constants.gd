@@ -11,4 +11,4 @@ const MAIN_MENU_PATH = "res://scenes/screens/main_menu.tscn"
 const MAIN_SCENE_PATH = "res://scenes/screens/main_scene.tscn"
 
 #Sounds
-const MENU_BUTTON_SOUND = "res://assets/audio/sfx/Jam_Player_Tambor_1_Sonido.ogg"
+const SOUND_TAMBOR_1 = "res://assets/audio/sfx/Jam_Player_Tambor_1_Sonido.ogg"

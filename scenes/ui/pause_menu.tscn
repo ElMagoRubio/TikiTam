@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://iulxy2uhwmqq"]
+
+[ext_resource type="Script" uid="uid://bc2al4xfh34ww" path="res://scripts/ui/pause_menu.gd" id="1_6tw0m"]
+[ext_resource type="PackedScene" uid="uid://dp3conn5ww2sv" path="res://scenes/ui/menu_controllers.tscn" id="2_0lmf7"]
+[ext_resource type="PackedScene" uid="uid://cbglm0ijl0ta6" path="res://scenes/ui/options_menu.tscn" id="3_f6eus"]
+
+[node name="PauseMenu" type="Node2D"]
+script = ExtResource("1_6tw0m")
+
+[node name="PauseButton" type="Button" parent="."]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 100.0
+offset_bottom = 100.0
+shortcut_feedback = false
+shortcut_in_tooltip = false
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_0lmf7")]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Label" parent="PauseMenu" index="1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.0
+offset_top = 0.0
+offset_right = 65.0
+offset_bottom = 160.0
+grow_horizontal = 2
+text = "PAUSA"
+
+[node name="Buttons" parent="PauseMenu" index="2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -154.0
+offset_right = 100.0
+offset_bottom = 154.0
+
+[node name="Button0" parent="PauseMenu/Buttons" index="0"]
+process_mode = 3
+text = "REANUDAR"
+
+[node name="Button1" parent="PauseMenu/Buttons" index="1"]
+text = "OPCIONES"
+
+[node name="Button2" parent="PauseMenu/Buttons" index="2"]
+text = "MENÚ PRINCIPAL"
+
+[node name="OptionsMenu" parent="." instance=ExtResource("3_f6eus")]
+visible = false
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="PauseMenu/Buttons/Button0" to="." method="_on_pause_button_0_pressed"]
+[connection signal="pressed" from="PauseMenu/Buttons/Button1" to="." method="_on_pause_button_1_pressed"]
+[connection signal="pressed" from="PauseMenu/Buttons/Button2" to="." method="_on_pause_button_2_pressed"]
+[connection signal="pressed" from="OptionsMenu/Options/Buttons/Button2" to="." method="_on_options_button_2_pressed"]
+
+[editable path="PauseMenu"]
+[editable path="OptionsMenu"]
+[editable path="OptionsMenu/Options"]
+[editable path="OptionsMenu/Audio"]
+[editable path="OptionsMenu/Video"]
+[editable path="OptionsMenu/Video/MenuControllers"]

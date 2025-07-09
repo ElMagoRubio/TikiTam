@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalSounds="*res://scripts/ui/global_sounds.gd"
+GlobalSounds="*res://scripts/global/global_sounds.gd"
+GlobalConstants="*res://scripts/global/global_constants.gd"
 
 [display]
 

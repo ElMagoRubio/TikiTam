@@ -21,6 +21,19 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.729412)
 metadata/_edit_use_anchors_ = true
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 102.0
+offset_right = 1135.0
+offset_bottom = 177.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 40
+text = "MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15

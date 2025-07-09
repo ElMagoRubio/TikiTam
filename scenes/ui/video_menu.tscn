@@ -10,6 +10,9 @@ script = ExtResource("1_ru16h")
 offset_right = 1920.0
 offset_bottom = 1080.0
 
+[node name="Label" parent="MenuControllers" index="1"]
+text = "VIDEO"
+
 [node name="Button0" parent="MenuControllers/Buttons" index="0"]
 toggle_mode = true
 text = "PANTALLA COMPLETA"

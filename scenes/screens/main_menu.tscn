@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://7eyy2ew4udo6"]
+
+[ext_resource type="Script" uid="uid://2qy1vdca4lwr" path="res://scripts/screens/main_menu.gd" id="1_5weqt"]
+[ext_resource type="Texture2D" uid="uid://dagsrjhec3hj5" path="res://assets/sprites/background/BG_Piramide-01.png" id="2_kacuo"]
+[ext_resource type="PackedScene" uid="uid://dp3conn5ww2sv" path="res://scenes/ui/menu_controllers.tscn" id="3_kr80i"]
+[ext_resource type="PackedScene" uid="uid://cbglm0ijl0ta6" path="res://scenes/ui/options_menu.tscn" id="4_e21yp"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_5weqt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_kacuo")
+metadata/_edit_use_anchors_ = true
+
+[node name="MainMenu" parent="." instance=ExtResource("3_kr80i")]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" parent="MainMenu" index="1"]
+text = "MAIN"
+
+[node name="Button0" parent="MainMenu/Buttons" index="0"]
+text = "JUGAR"
+
+[node name="Button1" parent="MainMenu/Buttons" index="1"]
+text = "OPCIONES"
+
+[node name="Button2" parent="MainMenu/Buttons" index="2"]
+text = "SALIR"
+
+[node name="OptionsMenu" parent="." instance=ExtResource("4_e21yp")]
+visible = false
+
+[connection signal="pressed" from="MainMenu/Buttons/Button0" to="." method="_on_main_button_0_pressed"]
+[connection signal="pressed" from="MainMenu/Buttons/Button1" to="." method="_on_main_button_1_pressed"]
+[connection signal="pressed" from="MainMenu/Buttons/Button2" to="." method="_on_main_button_2_pressed"]
+[connection signal="pressed" from="OptionsMenu/Options/Buttons/Button2" to="." method="_on_option_button_2_pressed"]
+
+[editable path="MainMenu"]
+[editable path="OptionsMenu"]
+[editable path="OptionsMenu/Options"]
+[editable path="OptionsMenu/Audio"]
+[editable path="OptionsMenu/Audio/MenuControllers"]
+[editable path="OptionsMenu/Video"]
+[editable path="OptionsMenu/Video/MenuControllers"]
